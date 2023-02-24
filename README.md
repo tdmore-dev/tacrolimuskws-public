@@ -20,8 +20,3 @@ The official copyright holder of this work is the KU Leuven university.
 # Limitations
 This software is a research project, and cannot be considered as a
 validated medical device. It is not a substitute for clinical reasoning.
-
-# Contribution guidelines
-Currently, the license does not allow to modify the code any further. Once this changes, refer to the below for contribution.
-
-Please find the contribution guidelines <a href="CONTRIBUTING.html">here</a>. This document also contains some technical documentation. To make contributions to this project, you will need to sign a transfer of copyright statement. Please find it <a href="TODO">here</a>.
