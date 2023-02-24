@@ -1,0 +1,46 @@
+---
+title: "Architecture design"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Architecture design}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+### Architecture overview {-}
+The tacrolimuskws package provides a clinical decision support system (CDS) for tacrolimus dose adaptation of de novo kidney transplant recipients in the first 14 days post-transplant.
+
+The CDS can be accessed by the KWS EHR through a Plumber API. This component stores any received requests in a KWS-format Mongo database, and then translates them into a generic format that can be used by tdmore. The dose recommendation is obtained and stored in a separate tdmore-format Mongo database, and the resulting recommendation is then sent back to the KWS system.
+The Plumber API also provides an admin interface to get an overview of all received requests and responses.
+
+The CDS can be accessed by physicians through a Shiny web interface. The web interface consults the tdmore-format Mongo database and displays the input/output information.
+
+
+```{r architecture, echo=FALSE}
+DiagrammeR::grViz("
+digraph G {
+	KWS -> Plumber;
+	Plumber -> MongoKWSDb;
+	Plumber -> translate;
+	translate -> tdmore;
+	tdmore -> translate;
+	translate -> Plumber;
+	Plumber -> KWS;
+	MongoKWSDb -> PlumberAdmin;
+	
+	translate -> TdmoreDb;
+	TdmoreDb -> tdmoreshiny;
+	tdmoreshiny -> Shiny;
+	Shiny -> Physician;
+}
+")
+```
+
+### Plumber API
+The KWS sends requests using a specific format. This request is translated into model-specific dataframes.
+
+
+
+
+### Code appendix
+```{r ref.label=knitr::all_labels(), echo = T, eval = F}
+```

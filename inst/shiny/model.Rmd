@@ -1,0 +1,20 @@
+---
+title: ""
+output: md_document
+params:
+   modelId: NA
+---
+
+```{r, echo=F, message=F}
+# Loading all necessary libraries
+library(tdmore)
+library(shinytdmore)
+library(knitr)
+library(tidyverse)
+library(assertthat)
+```
+
+
+```{r, echo=F, comment=NA}
+summary(get(params$modelId))
+```

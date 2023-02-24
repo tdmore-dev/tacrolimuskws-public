@@ -1,0 +1,23 @@
+# Example deployment for Tacrolimus-KWS
+# See https://docs.docker.com/samples/library/mongo/#-via-docker-stack-deploy-or-docker-compose
+# Execute using:
+# docker stack deploy -c inst/stack.yml tacrolimus-kws-stack
+version: '3.1'
+
+services:
+  mongo-instance:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  tacrolimus-kws-instance:
+    image: rfaelens/tacrolimuskws:latest
+    ports:
+      - 8080:8080
+      - 8081:8081
+    environment:
+      KWS_CONFIG_MONGODB_ADMINUSERNAME: root
+      KWS_CONFIG_MONGODB_ADMINPASSWORD: example
+      KWS_CONFIG_MONGODB_SERVER: mongo-instance
+      KWS_CONFIG_API_KEY: myKey

@@ -1,0 +1,50 @@
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    perspective: 1500px;
+}
+
+
+#sidebar {
+    min-width: 380px;
+    max-width: 380px;
+    padding: 20px;
+    height: 100%;
+}
+
+#sidebar.active {
+    margin-left: -380px;
+    transform: rotateY(100deg);
+}
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    /* transition: all 0.3s; */
+}
+
+#predictionTabId-sidebarCollapse {
+    width: 40px;
+    height: 40px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    box-shadow: none;
+}
+
+#predictionTabId-sidebarCollapse:visited {
+  box-shadow: none;
+}
+
+#predictionTabId-sidebarCollapse:focus {
+  box-shadow: none;
+}

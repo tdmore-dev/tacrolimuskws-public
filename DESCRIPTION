@@ -1,0 +1,32 @@
+Package: tacrolimuskws
+Type: Package
+Title: Tacrolimus dose adaptation
+Version: 1.0.0
+Authors@R: c(
+  person("Ruben", "Faelens", role = c("aut", "cre"), email = "ruben.faelens@kuleuven.be"),
+  person("Nicolas", "Luyckx", role=c("aut", "csl")),
+  person("Quentin", "Leirens", role=c("aut", "csl")),
+  person("Thomas", "Bouillon", role="dgs"),
+  person("Pieter", "Annaert", role="dgs"),
+  person("Daniel", "Roshammar", role="dgs"),
+  person("KULeuven", role="cph"),
+  person("FWO TBM Grant", role="fnd")
+  )
+Description: This package contains the Tacrolimus dose adaptation application, for use
+    in the UZ Leuven environment. This is an UNTESTED and UNVALIDATED SaMD and should therefore
+    never be used on patients outside of a controlled environment in a clinical trial setting.
+Depends: R (>= 3.5.0)
+Imports: shinyWidgets, Rook, assertthat, plyr, dplyr, tdmore, rjson, lubridate, jsonvalidate, mongolite, 
+  shiny, shinyBS, DT, tidyverse, plotly, crosstalk, plumber,
+  rhandsontable, R6, shinytdmore, tibble, zoo, tidyr, anytime, timevis, htmlwidgets,
+  MCMCpack, mnormt, mvnfast, uuid, shinytest
+Remotes: tdmore-dev/tdmore
+License: file LICENSE
+Encoding: UTF-8
+Language: en-US
+LazyData: true
+Suggests: stringr, knitr, rmarkdown, testthat, roxygen2, devtools, vdiffr, svglite, pkgdown, bookdown, webshot
+RoxygenNote: 7.1.1
+VignetteBuilder: knitr
+URL: https://github.com/tdmore-dev/tacrolimuskws-public
+BugReports: https://github.com/tdmore-dev/tacrolimuskws-public/issues

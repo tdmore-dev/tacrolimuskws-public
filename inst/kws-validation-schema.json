@@ -1,0 +1,277 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "KWS output",
+    "description": "Schema to validate KWS JSON output",
+    "type": "object",
+    "properties": {
+      "model": {
+  			"description": "Model to be used",
+        "type": "string"
+      },
+  		"ingreep": {
+  			"description": "Transplant(s) information",
+        "type": "array",
+  			"items": {
+          "type": "object",
+  				"properties": {
+  					"datum": {
+  						"description": "Transplant date",
+  						"type": "string"
+  					},
+  					"idType": {
+  						"description": "Transplant ID type",
+  						"type": "string"
+  					},
+  					"id": {
+  						"description": "Transplant ID",
+  						"type": "string"
+  					},
+  					"omschrijving": {
+  						"description": "Transplant description",
+  						"type": "string"
+  					}
+  				}, "required": ["datum", "idType", "id", "omschrijving"]
+        },
+        "minItems": 0
+      },
+  		"labo": {
+        "description": "Lab results",
+        "type": "array",
+  			"items": {
+          "type": "object",
+  				"properties": {
+  					"datum": {
+  						"description": "Result date",
+  						"type": "string"
+  					},
+  					"idType": {
+  						"description": "Result ID type",
+  						"type": "string"
+  					},
+  					"id": {
+  						"description": "Result ID",
+  						"type": "string"
+  					},
+  					"numeriek": {
+  						"description": "Result value",
+  						"type": "number"
+  					},
+  					"omschrijving": {
+  						"description": "Result description",
+  						"type": "string"
+  					},
+  					"soort": {
+  						"description": "Result category",
+  						"type": "string"
+  					},
+  					"ucumUnit": {
+  						"description": "UCUM unit",
+  						"type": "string"
+  					}
+  				}, "required": ["datum", "idType", "id", "numeriek", "omschrijving", "soort", "ucumUnit"]
+        },
+        "minItems": 0
+      },
+  		"patient": {
+  			"description": "Patient information",
+        "type": "array",
+  			"items": {
+          "type": "object"
+        },
+        "minItems": 0
+      },
+      "request": {
+  			"description": "Request information",
+  			"type": "object",
+  			"properties": {
+  				"id": {
+  					"description": "Request ID",
+  					"type": "string"
+  				},
+  				"time": {
+  				  "description": "Request ID",
+  					"type": "string"
+  				}
+  			}, "required": ["id", "time"]
+  		},
+  		"uitvoering": {
+  			"description": "Executed prescriptions",
+  			"type": "array",
+  			"items": {
+          "type": "object",
+  				"properties": {
+  					"uitvoeringNr": {
+  						"description": "Prescription number",
+  						"type": "integer"
+  					},
+  					"cnk": {
+  						"description": "CNK number",
+  						"type": "string"
+  					},
+  					"omschrijving": {
+  						"description": "Description",
+  						"type": "string"
+  					},
+  					"datumVan": {
+  						"description": "Date from",
+  						"type": "string"
+  					},
+  					"datumTot": {
+  						"description": "Date to",
+  						"type": "string"
+  					},
+  					"dosis": {
+  						"description": "Administration dose",
+  						"type": "object",
+  						"properties": {
+  							"value": {
+  								"description": "Dose value",
+  								"type": "number"
+  							},
+  							"ucumUnit": {
+  								"description": "UCUM unit",
+  								"type": "string"
+  							},
+  							"required": ["value", "ucumUnit"]
+  						}
+  					},
+  					"voorschriftNr": {
+  						"description": "Related prescription number",
+  						"type": "integer"
+  					}
+  				},
+  				"required": ["uitvoeringNr", "cnk", "omschrijving", "datumVan", "datumTot", "dosis"]
+        },
+        "minItems": 0
+      },
+  		"voorschrift": {
+  			"description": "Validated prescriptions",
+        "type": "array",
+  			"items": {
+          "type": "object",
+  				"properties": {
+  					"voorschriftNr": {
+  						"description": "Prescription number",
+  						"type": "integer"
+  					},
+  					"cnk": {
+  						"description": "CNK number",
+  						"type": "string"
+  					},
+  					"omschrijving": {
+  						"description": "Description",
+  						"type": "string"
+  					},
+  					"datumVan": {
+  						"description": "Date from",
+  						"type": "string"
+  					},
+  					"datumTot": {
+  						"description": "Date to",
+  						"type": "string"
+  					},
+  					"dosis": {
+  						"description": "Administration dose",
+  						"type": "object",
+  						"properties": {
+  							"value": {
+  								"description": "Dose value",
+  								"type": "number"
+  							},
+  							"ucumUnit": {
+  								"description": "UCUM unit",
+  								"type": "string"
+  							},
+  							"required": ["value", "ucumUnit"]
+  						}
+  					}
+  				},
+  				"required": ["voorschriftNr", "cnk", "omschrijving", "datumVan", "datumTot", "dosis"]
+        },
+        "minItems": 0
+      },
+      "voorbereiding": {
+  			"description": "Prepared prescriptions, to be validated",
+        "type": "array",
+  			"items": {
+          "type": "object",
+  				"properties": {
+  					"uitvoeringNr": {
+  						"description": "Prescription number",
+  						"type": "integer"
+  					},
+  					"cnk": {
+  						"description": "CNK number",
+  						"type": "string"
+  					},
+  					"omschrijving": {
+  						"description": "Description",
+  						"type": "string"
+  					},
+  					"datumVan": {
+  						"description": "Date from",
+  						"type": "string"
+  					},
+  					"datumTot": {
+  						"description": "Date to",
+  						"type": "string"
+  					},
+  					"dosis": {
+  						"description": "Administration dose",
+  						"type": "object",
+  						"properties": {
+  							"value": {
+  								"description": "Dose value",
+  								"type": "number"
+  							},
+  							"ucumUnit": {
+  								"description": "UCUM unit",
+  								"type": "string"
+  							},
+  							"required": ["value", "ucumUnit"]
+  						}
+  					}
+  				},
+  				"required": ["voorschriftNr", "cnk", "omschrijving", "datumVan", "datumTot", "dosis"]
+        },
+        "minItems": 0
+      },
+  		"zorg": {
+  			"description": "Care brought to the patient",
+        "type": "array",
+  			"items": {
+          "type": "object",
+  				"properties": {
+  					"zorgNr": {
+  						"description": "Care number",
+  						"type": "integer"
+  					},
+  					"definitieCode": {
+  						"description": "Definition code",
+  						"type": "string"
+  					},
+  					"attributen": {
+  						"description": "Attributes",
+  						"type": "array",
+  						"items": {
+  							"type": "object",
+  							"properties": {
+  								"attribuutDefinitieCode": {
+  									"description": "Attribute definition code",
+  									"type": "string"
+  								},
+  								"waarde": {
+  									"description": "Attribute value",
+  									"type": "string"
+  								},
+  							}, "required": ["attribuutDefinitieCode", "waarde"]
+  						},
+  						"minItems": 0
+  					}
+  				}, "required": ["zorgNr", "definitieCode", "attributen"]
+        },
+        "minItems": 0
+      }
+    },
+    "required": ["request"]
+}

@@ -1,0 +1,31 @@
+substitutions:
+  _DOCKER_TAG: '${BRANCH_NAME/master/latest}'
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '--build-arg', 'DOCKER_TAG=${_DOCKER_TAG}', '-t', 'gcr.io/external-tacrolimuskws-dev/github.com/tdmore-dev/tacrolimuskws:${_DOCKER_TAG}', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ["push", "gcr.io/external-tacrolimuskws-dev/github.com/tdmore-dev/tacrolimuskws:${_DOCKER_TAG}"]
+- name: 'gcr.io/cloud-builders/kubectl'
+  args:
+  - '--namespace=${_NAMESPACE}'
+  - 'set'
+  - 'image'
+  - 'deployment/tacrolimuskws'
+  - 'tacrolimuskws=gcr.io/external-tacrolimuskws-dev/github.com/tdmore-dev/tacrolimuskws:${_DOCKER_TAG}'
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=europe-west1-b'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=gke-tacrolimus-dev-01'
+- name: 'gcr.io/cloud-builders/kubectl'
+  args:
+  - '--namespace=${_NAMESPACE}'
+  - 'patch'
+  - 'deployment'
+  - 'tacrolimuskws'
+  - '-p'
+  - '{"spec":{"template":{"metadata":{"annotations":{"revision":"$REVISION_ID", "build":"$BUILD_ID"}}}}}'
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=europe-west1-b'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=gke-tacrolimus-dev-01'
+images: ['gcr.io/external-tacrolimuskws-dev/github.com/tdmore-dev/tacrolimuskws']
+tags: ['${_DOCKER_TAG}']
+timeout: 1200s

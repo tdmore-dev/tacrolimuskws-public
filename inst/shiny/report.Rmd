@@ -1,0 +1,52 @@
+---
+title: "Tacrolimus KWS report"
+output: html_document
+params:
+    id: NA
+---
+
+```{r, echo=F, message=F}
+# Loading all necessary libraries
+library(tdmore)
+library(shinytdmore)
+library(knitr)
+library(tidyverse)
+library(assertthat)
+```
+
+```{r, echo=F}
+dbConfig <- list(
+  user = Sys.getenv("KWS_CONFIG_MONGODB_ADMINUSERNAME"),
+  password = Sys.getenv("KWS_CONFIG_MONGODB_ADMINPASSWORD"),
+  server = Sys.getenv("KWS_CONFIG_MONGODB_SERVER")
+)
+url <- shinytdmore::MongoDatabase$composeUrl(host=dbConfig$server, user=dbConfig$user, password=dbConfig$password)
+db <- MongoDatabase$new(collection="patient", db="tdmore_prod", url=url)
+patient <- db$get(params$id)
+```
+
+## Patient data
+Name: `r paste(patient$firstname, patient$lastname)`
+
+### Doses history
+```{r, echo=F}
+kable(patient$doses)
+```
+
+### Measures history
+```{r, echo=F}
+kable(patient$measures)
+```
+
+### Covariates
+```{r, echo=F}
+kable(patient$covariates)
+```
+
+## Recommendation
+
+## Model
+Name: `r patient$model`
+```{r, echo=F, comment=NA}
+summary(get(patient$model))
+```

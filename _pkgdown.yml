@@ -1,0 +1,31 @@
+## This file configures the building process for pkgdown::build_site()
+template:
+  params:
+    noindex: true # tells search engines not to index the site
+
+home:
+  strip_header: true
+
+development:
+  mode: auto  # detect based on version number
+  version_label: warning
+  version_tooltip: "to be used as an *example* only"
+
+reference:
+- title: Translating from EHR to TDMore
+  desc: >
+    These functions translate between the EHR-specific JSON format and TDMore-compatible data.frame
+  contents:
+    - algebraic
+    - tdmore
+    - tdmore.algebraic
+    - tdmore.default
+    - tdmore.nlmixrUI
+    - tdmore.nlmixrFitCore
+    - tdmore.RxODE
+    - tdmore_deSolve
+    - errorModel
+    - print.tdmore
+    - summary.tdmore
+    - coef.tdmore
+

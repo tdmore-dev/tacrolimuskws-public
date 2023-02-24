@@ -1,0 +1,18 @@
+language: r
+
+cache: packages
+
+r_packages:
+  - covr
+  - devtools
+
+after_success:
+  - Rscript -e 'library(covr);codecov()'
+  
+notifications:
+  email:
+    recipients:
+      - ruben.faelens@kuleuven.be
+      - nicolas.luyckx@sgs.com
+    on_success: change # default: change
+    on_failure: always # default: always

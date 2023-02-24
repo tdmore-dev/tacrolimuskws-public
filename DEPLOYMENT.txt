@@ -1,0 +1,14 @@
+Tacrolimuskws is deployed on the google cloud.
+
+
+To gain privileged shell access:
+
+kubectl describe nodes
+gcloud compute ssh gke-gke-tacrolimus-dev-01-pool-2-edb8032d-4nsa
+
+docker ps -a
+docker ps -a | grep tacr | grep Rscr | grep 5598
+
+docker exec -ti --privileged CONTAINER_ID bash
+
+

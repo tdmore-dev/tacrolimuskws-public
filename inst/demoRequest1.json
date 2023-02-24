@@ -1,0 +1,356 @@
+{
+    "ingreep": [
+        {
+            "datum": "2020-02-06T00:00:00+02:00",
+            "idType": "ICD9-O",
+            "id": "UZLXXAABFD",
+            "omschrijving": "I: levende donor niertransplant, rechts"
+        }
+    ],
+    "labo": [
+        {
+            "datum": "2020-01-30T10:40:00+02:00",
+            "idType": "http://uzleuven.be/lis/rapportentiteit",
+            "id": "510",
+            "numeriek": 0.35,
+            "omschrijving": "Hematocriet (bloed)",
+            "soort": "R",
+            "ucumUnit": "{ratio}"
+        },
+        {
+            "datum": "2020-02-09T08:00:00+02:00",
+            "idType": "http://uzleuven.be/lis/rapportentiteit",
+            "id": "859",
+            "numeriek": 18,
+            "omschrijving": "Tacrolimus (FK 506) (bloed)",
+            "soort": "R",
+            "ucumUnit": "ug/L"
+        },
+        {
+            "datum": "2020-02-08T08:00:00+02:00",
+            "idType": "http://uzleuven.be/lis/rapportentiteit",
+            "id": "510",
+            "numeriek": 0.25,
+            "omschrijving": "Hematocriet (bloed)",
+            "soort": "R",
+            "ucumUnit": "{ratio}"
+        },
+        {
+            "datum": "2020-02-07T08:00:00+02:00",
+            "idType": "http://uzleuven.be/lis/rapportentiteit",
+            "id": "510",
+            "numeriek": 0.25,
+            "omschrijving": "Hematocriet (bloed)",
+            "soort": "R",
+            "ucumUnit": "{ratio}"
+        },
+        {
+            "datum": "2020-02-06T20:50:00+02:00",
+            "idType": "http://uzleuven.be/lis/rapportentiteit",
+            "id": "510",
+            "numeriek": 0.25,
+            "omschrijving": "Hematocriet (bloed)",
+            "soort": "R",
+            "ucumUnit": "{ratio}"
+        },
+        {
+            "datum": "2020-02-05T08:50:00+02:00",
+            "idType": "http://uzleuven.be/lis/rapportentiteit",
+            "id": "510",
+            "numeriek": 0.35,
+            "omschrijving": "Hematocriet (bloed)",
+            "soort": "R",
+            "ucumUnit": "{ratio}"
+        },
+        {
+            "datum": "2020-02-09T08:00:00+02:00",
+            "idType": "http://uzleuven.be/lis/rapportentiteit",
+            "id": "510",
+            "numeriek": 0.25,
+            "omschrijving": "Hematocriet (bloed)",
+            "soort": "R",
+            "ucumUnit": "{ratio}"
+        },
+        {
+            "datum": "2020-02-06T17:30:00+02:00",
+            "idType": "http://uzleuven.be/lis/rapportentiteit",
+            "id": "510",
+            "numeriek": 0.25,
+            "omschrijving": "Hematocriet (bloed)",
+            "soort": "R",
+            "ucumUnit": "{ratio}"
+        },
+        {
+            "datum": "2020-02-08T08:00:00+02:00",
+            "idType": "http://uzleuven.be/lis/rapportentiteit",
+            "id": "859",
+            "numeriek": 17,
+            "omschrijving": "Tacrolimus (FK 506) (bloed)",
+            "soort": "R",
+            "ucumUnit": "ug/L"
+        },
+        {
+            "datum": "2020-02-07T08:00:00+02:00",
+            "idType": "http://uzleuven.be/lis/rapportentiteit",
+            "id": "859",
+            "numeriek": 7,
+            "omschrijving": "Tacrolimus (FK 506) (bloed)",
+            "soort": "R",
+            "ucumUnit": "ug/L"
+        }
+    ],
+    "patient": [
+        {
+            "geboorteDatum": "1980-01-01T00:00:00+01:00",
+            "geslacht": "m"
+        }
+    ],
+    "request": {
+        "id": "1617954832926097598",
+        "time": "2020-02-09T09:50:00+02:00",
+        "trigger": {
+            "datum": "2020-02-09T08:00:00+02:00",
+            "idType": "http://uzleuven.be/lis/rapportentiteit",
+            "id": "859",
+            "numeriek": 18,
+            "soort": "R",
+            "ucumUnit": "ug/L"
+        }
+    },
+    "studie": [
+        {
+            "studieNr": "63463",
+            "subdeel": "TEST PATIENT"
+        }
+    ],
+    "uitvoering": [
+        {
+            "uitvoeringNr": 121500596,
+            "cnk": " ",
+            "omschrijving": "PROGRAFT",
+            "datumVan": "2020-02-09T07:50:00+02:00",
+            "datumTot": "2020-02-09T07:50:00+02:00",
+            "dosis": {
+                "value": 8,
+                "ucumUnit": "mg"
+            },
+            "voorschriftNr": 264914788
+        },
+        {
+            "uitvoeringNr": 121473753,
+            "cnk": " ",
+            "omschrijving": "PROGRAFT",
+            "datumVan": "2020-02-08T19:40:00+02:00",
+            "datumTot": "2020-02-08T19:40:00+02:00",
+            "dosis": {
+                "value": 8,
+                "ucumUnit": "mg"
+            },
+            "voorschriftNr": 264914787
+        },
+        {
+            "uitvoeringNr": 121448076,
+            "cnk": " ",
+            "omschrijving": "PROGRAFT",
+            "datumVan": "2020-02-08T11:50:00+02:00",
+            "datumTot": "2020-02-08T11:50:00+02:00",
+            "dosis": {
+                "value": 8,
+                "ucumUnit": "mg"
+            },
+            "voorschriftNr": 264914786
+        },
+        {
+            "uitvoeringNr": 121402386,
+            "cnk": " ",
+            "omschrijving": "PROGRAFT",
+            "datumVan": "2020-02-07T20:20:00+02:00",
+            "datumTot": "2020-02-07T20:20:00+02:00",
+            "dosis": {
+                "value": 10,
+                "ucumUnit": "mg"
+            },
+            "voorschriftNr": 264914785
+        },
+        {
+            "uitvoeringNr": 121372384,
+            "cnk": " ",
+            "omschrijving": "PROGRAFT",
+            "datumVan": "2020-02-07T12:20:00+02:00",
+            "datumTot": "2020-02-07T12:20:00+02:00",
+            "dosis": {
+                "value": 10,
+                "ucumUnit": "mg"
+            },
+            "voorschriftNr": 264914784
+        },
+        {
+            "uitvoeringNr": 121282528,
+            "cnk": " ",
+            "omschrijving": "PROGRAFT",
+            "datumVan": "2020-02-06T10:30:00+02:00",
+            "datumTot": "2020-02-06T10:30:00+02:00",
+            "dosis": {
+                "value": 13,
+                "ucumUnit": "mg"
+            },
+            "voorschriftNr": 264914768
+        }
+    ],
+    "voorbereiding": [
+        {
+            "voorschriftNr": 264914793,
+            "cnk": " ",
+            "omschrijving": "PROGRAFT",
+            "datumVan": "2020-02-11T20:00:00+02:00",
+            "datumTot": "2020-02-11T20:00:00+02:00",
+            "dosis": {
+                "value": 0,
+                "ucumUnit": "mg"
+            },
+            "nota": "<html>Berekende suggestie: 5.5 dosis_mg <\/html>"
+        },
+        {
+            "voorschriftNr": 264914789,
+            "cnk": " ",
+            "omschrijving": "PROGRAFT",
+            "datumVan": "2020-02-09T20:00:00+02:00",
+            "datumTot": "2020-02-09T20:00:00+02:00",
+            "dosis": {
+                "value": 0,
+                "ucumUnit": "mg"
+            },
+            "nota": "<html>Berekende suggestie: 5.5 dosis_mg <\/html>"
+        },
+        {
+            "voorschriftNr": 264914790,
+            "cnk": " ",
+            "omschrijving": "PROGRAFT",
+            "datumVan": "2020-02-10T08:00:00+02:00",
+            "datumTot": "2020-02-10T08:00:00+02:00",
+            "dosis": {
+                "value": 0,
+                "ucumUnit": "mg"
+            },
+            "nota": "<html>Berekende suggestie: 5.5 dosis_mg <\/html>"
+        },
+        {
+            "voorschriftNr": 264914791,
+            "cnk": " ",
+            "omschrijving": "PROGRAFT",
+            "datumVan": "2020-02-10T20:00:00+02:00",
+            "datumTot": "2020-02-10T20:00:00+02:00",
+            "dosis": {
+                "value": 0,
+                "ucumUnit": "mg"
+            },
+            "nota": "<html>Berekende suggestie: 5.5 dosis_mg <\/html>"
+        },
+        {
+            "voorschriftNr": 264914792,
+            "cnk": " ",
+            "omschrijving": "PROGRAFT",
+            "datumVan": "2020-02-11T08:00:00+02:00",
+            "datumTot": "2020-02-11T08:00:00+02:00",
+            "dosis": {
+                "value": 0,
+                "ucumUnit": "mg"
+            },
+            "nota": "<html>Berekende suggestie: 5.5 dosis_mg <\/html>"
+        }
+    ],
+    "voorschrift": [
+        {
+            "voorschriftNr": 264914784,
+            "cnk": " ",
+            "omschrijving": "PROGRAFT",
+            "datumVan": "2020-02-07T12:10:00+02:00",
+            "datumTot": "2020-02-07T12:10:00+02:00",
+            "dosis": {
+                "value": 10,
+                "ucumUnit": "mg"
+            },
+            "validatieDatum": "2020-02-07T12:00:00+02:00"
+        },
+        {
+            "voorschriftNr": 264914768,
+            "cnk": " ",
+            "omschrijving": "PROGRAFT",
+            "datumVan": "2020-02-06T10:30:00+02:00",
+            "datumTot": "2020-02-06T10:30:00+02:00",
+            "dosis": {
+                "value": 13,
+                "ucumUnit": "mg"
+            },
+            "validatieDatum": "2020-02-06T10:20:00+02:00"
+        },
+        {
+            "voorschriftNr": 264914788,
+            "cnk": " ",
+            "omschrijving": "PROGRAFT",
+            "datumVan": "2020-02-09T08:00:00+02:00",
+            "datumTot": "2020-02-09T08:00:00+02:00",
+            "dosis": {
+                "value": 8,
+                "ucumUnit": "mg"
+            },
+            "validatieDatum": "2020-02-08T17:50:00+02:00",
+            "nota": "<html>Berekende suggestie: 6 dosis_mg <\/html>"
+        },
+        {
+            "voorschriftNr": 264914787,
+            "cnk": " ",
+            "omschrijving": "PROGRAFT",
+            "datumVan": "2020-02-08T20:00:00+02:00",
+            "datumTot": "2020-02-08T20:00:00+02:00",
+            "dosis": {
+                "value": 8,
+                "ucumUnit": "mg"
+            },
+            "validatieDatum": "2020-02-08T11:10:00+02:00",
+            "nota": "<html>Berekende suggestie: 7.5 dosis_mg <\/html>"
+        },
+        {
+            "voorschriftNr": 264914786,
+            "cnk": " ",
+            "omschrijving": "PROGRAFT",
+            "datumVan": "2020-02-08T11:30:00+02:00",
+            "datumTot": "2020-02-08T11:30:00+02:00",
+            "dosis": {
+                "value": 8,
+                "ucumUnit": "mg"
+            },
+            "validatieDatum": "2020-02-08T11:10:00+02:00",
+            "nota": "<html>Berekende suggestie: 2 dosis_mg <\/html>"
+        },
+        {
+            "voorschriftNr": 264914785,
+            "cnk": " ",
+            "omschrijving": "PROGRAFT",
+            "datumVan": "2020-02-07T20:00:00+02:00",
+            "datumTot": "2020-02-07T20:00:00+02:00",
+            "dosis": {
+                "value": 10,
+                "ucumUnit": "mg"
+            },
+            "validatieDatum": "2020-02-07T12:00:00+02:00"
+        }
+    ],
+    "zorg": [
+        {
+            "zorgNr": 2976787419,
+            "definitieCode": "FPgewicht",
+            "datum": "2020-02-05T10:00:00+02:00",
+            "attributen": [
+                {
+                    "attribuutDefinitieCode": "FPgewichtW",
+                    "waarde": "75"
+                },
+                {
+                    "attribuutDefinitieCode": "FPgewichtBMI",
+                    "waarde": "true"
+                }
+            ]
+        }
+    ]
+}
